@@ -22,4 +22,12 @@ module.exports = {
       return callBack(null, results);
     });
   },
+  GetVote: (callBack = () => {}) => {
+    pool.query(`SELECT * FROM storevote`, [], (error, results, fileds) => {
+      if (error) {
+        return callBack(error);
+      }
+      return callBack(null, results);
+    });
+  },
 };

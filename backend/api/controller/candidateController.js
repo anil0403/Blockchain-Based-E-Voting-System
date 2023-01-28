@@ -27,7 +27,7 @@ module.exports = {
     });
   },
   getCandidateById: (req, res) => {
-    const id = req.params.id;    //:id
+    const id = req.params.id; //:id
     getCandidateById(id, (error, results) => {
       if (error) {
         console.log(error);

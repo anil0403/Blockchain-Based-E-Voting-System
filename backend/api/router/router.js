@@ -23,7 +23,11 @@ const {
   getVoterBySocialNumber,
   updateVoterById,
 } = require("../controller/voterController");
-const { CreateVote, DeleteVote } = require("../controller/voteController");
+const {
+  CreateVote,
+  DeleteVote,
+  GetVote,
+} = require("../controller/voteController");
 
 // router for category
 
@@ -52,5 +56,6 @@ router.post("/update-voter", updateVoterById);
 //router for vote
 router.post("/create-vote", CreateVote);
 router.delete("/delete-vote", DeleteVote);
+router.get("/get-stored-vote", GetVote);
 
 module.exports = router;
