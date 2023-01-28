@@ -58,7 +58,7 @@ const VoterForm = () => {
       </div>
       <div className="form-item">
         <button className="btn" type="submit">
-          Add Candidate
+          Add Voter
         </button>
       </div>
     </form>
