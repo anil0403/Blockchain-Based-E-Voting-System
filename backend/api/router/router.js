@@ -22,6 +22,7 @@ const {
   deleteVoter,
   getVoterBySocialNumber,
   updateVoterById,
+  InitializeVoterByID,
 } = require("../controller/voterController");
 const {
   CreateVote,
@@ -52,6 +53,7 @@ router.get("/get-voter-by-id/:id", getVoterById);
 router.get("/get-voter-by-socialNumber/:socialNumber", getVoterBySocialNumber);
 router.delete("/delete-voter", deleteVoter);
 router.post("/update-voter", updateVoterById);
+router.post("/initialize-voter-by-id", InitializeVoterByID);
 
 //router for vote
 router.post("/create-vote", CreateVote);

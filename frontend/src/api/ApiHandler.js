@@ -201,3 +201,17 @@ export const DeleteVote = async () => {
     return response;
   });
 };
+
+// initialize voter (post request)
+export const InitializeVoter = async (id) => {
+  return await axios({
+    method: "post",
+    url: "http://localhost:3001/initialize-voter-by-id/",
+    data: {
+      id: id,
+    },
+    responseType: "json",
+  }).then((response) => {
+    return response;
+  });
+};

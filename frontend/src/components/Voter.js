@@ -1,6 +1,16 @@
+import { useEffect } from "react";
 import { DeleteVoter } from "../api/ApiHandler";
+import { InitializeVoter } from "../api/ApiHandler";
+
 const Voter = (props) => {
   const id = props.id;
+
+  useEffect(() => {
+    InitializeVoter(id).then((response) => {
+      console.log(response);
+    });
+  }, [id]);
+
   const deleteHandler = () => {
     DeleteVoter(id).then((response) => {
       console.log(response);

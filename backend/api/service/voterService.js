@@ -15,7 +15,19 @@ module.exports = {
   },
   updateVoterById: (id, callBack = () => {}) => {
     pool.query(
-      `UPDATE voter SET flag = true WHERE id = ?;`,
+      `UPDATE voter SET flag = true WHERE id = ?`,
+      [id],
+      (error, results, fields) => {
+        if (error) {
+          callBack(error);
+        }
+        return callBack(null, results[0]);
+      }
+    );
+  },
+  InitializeVoterByID: (id, callBack = () => {}) => {
+    pool.query(
+      `UPDATE voter SET flag = false WHERE id = ?`,
       [id],
       (error, results, fields) => {
         if (error) {
