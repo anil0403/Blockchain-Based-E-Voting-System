@@ -1,4 +1,4 @@
-import { createBrowserRouter, Route, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Vote from "./pages/vote/Vote";
 import Register from "./pages/register/Register";
 import Manage from "./pages/manage/Manage";
@@ -15,7 +15,6 @@ const router = createBrowserRouter([
     path: "/manage",
     element: <Manage />,
   },
-
 ]);
 
 function App() {

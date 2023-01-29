@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar";
 import ManageCandidate from "./ManageCandidate";
 import ManageCategory from "./ManageCategory";
 import ManageVoter from "./ManageVoter";
+import InitalizeVoter from "../../components/InitializeVoter";
 
 const Manage = () => {
   return (
@@ -47,7 +48,9 @@ const Manage = () => {
         </div>
         <div className="display-item">
           <span>Manage Voter</span>
+          <InitalizeVoter/>
           <table>
+            
             <thead>
               <tr>
                 <th>S.N</th>
